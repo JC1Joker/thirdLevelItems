@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23201012706-董嘉诚</title>
+    <script src="./font/iconfont.js"></script>
+    <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
+    <style>
+      body {
+        background-color: #f4f4f4;
+      }
+      
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: blue;
+        overflow: hidden;
+      }
+      a {
+        text-decoration: none;
+      }
+      a:link {
+        color: black;
+      }
+      a:visited {
+        color: black;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      body,
+      ul,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        margin-bottom: 50px; /* 固定导航一起的 */
+      }
+      .tnav {
+        border: 5px;
+        z-index: 9; /* 当你滑动时，导航条覆盖内容不跟随移动 */
+        position: fixed;
+        top: 0;
+        background-color: #fff;
+        width: 100%;
+      }
+      .tnav li:first-child {
+        margin-left: 10px;
+      }
+      .tnav span {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 46px;
+        margin-left: 5px;
+      }
+      .tnav li {
+        display: flex;
+        align-items: center;
+      }
+      .tnav li img {
+        height: 30px;
+        display: inline-block;
+      }
+
+      .tnav li:last-child {
+        position: absolute;
+        right: 0;
+        font-size: 42px;
+        margin-right: 5px;
+        font-weight: bold;
+      }
+      .main {
+        position: relative;
+        top: 50px;
+        bottom: auto;
+      }
+      .img{
+        padding: 10px;
+        border-radius: 15px;
+        margin-top: 50px;
+      }
+      .swiper {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 15%;
+        object-fit: cover;
+      }
+      .swiper-pagination-bullet-active{
+        width: 32px;
+        border-radius: 0; 
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+      }
+  
+      .dynamic_content {
+        width: 100%;
+        background-color: #fff;
+        height: 100%;
+        border-radius: 15px 15px;
+        margin: 0 auto;
+      }
+      .button_content {
+        padding: 10px;
+      }
+      .button {
+        width: 100%;
+        background-color: #fff;
+        height: 120px;
+        border-radius: 15px 15px;
+        margin: 0 auto;
+      }
+      .button ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center; /* 垂直居中 */
+        height: 100%; /* 让 ul 撑满父容器的高度 */
+      }
+
+      .button li {
+        text-align: center;
+      }
+
+      .button p {
+        margin-top: 5px; /* 调整文字与图标的间距 */
+      }
+      #app_scan {
+        margin: 0 auto;
+        padding: 10px;
+      }
+      #icon-hit{
+        position:absolute;
+        top: 0;
+        right: 0;
+      }
+      .app_scan_app {
+        position: relative;
+        width: 100%;
+        background-color: #fff;
+        height: 100px;
+        border-radius: 15px 15px;
+        margin: 0 auto;
+        display: inline-block;
+        flex-direction: row;
+      }
+      .text {
+        font-size: 14px;
+        padding: 10px;
+        width: 128px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+      }
+      .app_scan .text p{
+        margin: 0;
+      }
+      .text p:first-child{
+        color: black;
+        font-weight: bold;
+      }
+      .app_scan .text p:last-child {
+        color: #929292;
+      }
+
+      .dynamic {
+        padding: 10px;
+      }
+      .dynamic_div {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #ececec;
+      }
+      /* 拉取deceptionExposure 中的card样式 */
+      .content_card{
+        width: 100%;
+        border-bottom: 1px solid #929292;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .content_card .text{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        font-weight: bold;
+
+        
+      }
+      .content_card .text p:last-child{
+        font-weight: 0;
+        bottom: 0;
+        display: inline-block;
+        font-size: 14px;
+         font-size: 13px;
+        padding-top: 5px;
+        color: #797979;
+      
+      }
+      .content_card img{
+        position: relative;
+        width: 125px;
+        height: 75px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 15px;
+        padding: 10px;
+      }
+
+
+      .bnav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 9; /* 当你滑动时，导航条覆盖内容不跟随移动 */
+      }
+      .bnav li {
+        width: 33.333%;
+        text-align: center;
+        padding: 0.625rem 0;
+      }
+      .banv p {
+        color: #333;
+        line-height: 26px;
+        font-size: 14px;
+        letter-spacing: 3px;
+      }
+      .icon {
+        font-size: 36px;
+        margin: 5px 0;
+      }
+       #ad{
+            height: 400px;
+            background-color: #099;
+            color: #ececec;
+          text-align: center;
+          
+        }
+
+    </style>
+  </head>
+  <body>
+   <div id="ad">
+    本项目仅用于3Kxr的三级作业，禁止用于商业用途
+    </div>
+    <script>
+        var ad = document.getElementById("ad");
+        var timer;
+        var gao = ad.offsetHeight;
+        ad.clientHeight;
+        ad.scrollHeight;
+        console.log(gao);
+        window.setTimeout(function(){
+            timer=setInterval(dh,5);/* setInterval毫秒为单位 */
+            /* 回调函数 重复执行*/
+        },3000);
+
+        function dh(){
+            if(gao>=0){
+                ad.style.height=gao--+"px";
+            }else{
+                clearInterval(timer);
+            }
+        }
+    </script>
+    <!-- nav header main footer -->
+    <nav class="tnav" id="tnav_fixed">
+      <!-- 上导航logo -->
+      <ul>
+        <li>
+          <img src="./img/index/logo_about_us.png" alt="" />
+        </li>
+        <span>国家反诈中心</span>
+        <li>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-xiaoxi"></use>
+          </svg>
+        </li>
+      </ul>
+    </nav>
+ 
+    <!-- main内容 -->
+   <div class="img">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./img/index/banner1.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/index/banner2.png" alt="">
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+   </div>
+    
+
+      <div class="button_content">
+        <div class="button">
+          <ul>
+            <li>
+              <a href="./jvbao.html">
+                <svg class="icon" aria-hidden="true">
+                  <circle cx="50%" cy="50%" r="50%" fill="#637afe" />
+                  <use xlink:href="#icon-weibiaoti2"></use>
+                </svg>
+                <p>我要举报</p>
+              </a>
+            </li>
+            <li>
+              <a href="./aides.html">
+                <svg class="icon" aria-hidden="true">
+                  <circle cx="50%" cy="50%" r="50%" fill="#637afe" />
+                  <use xlink:href="#icon-hexagon"></use>
+                </svg>
+                <p>报案助手</p>
+              </a>
+              
+            </li>
+            <li>
+              <svg class="icon" aria-hidden="true" fill="white">
+                <circle cx="50%" cy="50%" r="50%" fill="#637afe" />
+                <use xlink:href="#icon-mojing"></use>
+              </svg>
+              <p>来电预警</p>
+            </li>
+            <li>
+              <a href="./IdentityVerification.html">
+                <svg class="icon" aria-hidden="true">
+                <circle cx="50%" cy="50%" r="50%" fill="#637afe" />
+                <use xlink:href="#icon-shenfen"></use>
+              </svg>
+              <p>身份核实</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="app_scan">
+        <h3>风险自查</h3>
+        <div class="app_scan_app">
+          <div class="text">
+            <p>APP自检</p>
+            <p>手机自测可疑app</p>
+          </div>
+          <!-- app_scan img -->
+          <div id="icon-hit">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-hit"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!-- 风险自查 -->
+      <div class="dynamic">
+        <h3>最新动态</h3>
+        <div class="dynamic_content" id="dynamicContent">
+         
+         <!-- 此处引用json -->
+
+        </div>
+      <div class="open-btn" id="btncontain">
+        <a onclick="showMore()">更多内容</a>
+    </div>
+      <!-- 最新动态 -->
+    
+    <nav class="bnav">
+      <!-- 下导航 -->
+      <ul>
+        <li>
+          <a href="index.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-shouye"></use>
+            </svg>
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a href="./deceptionExposure.html">
+            <svg class="icon changeable_svg" aria-hidden="true">
+              <use xlink:href="#icon-qingdan"></use>
+            </svg>
+            <p>骗局曝光</p>
+          </a>
+        </li>
+        <li>
+          <a href="./myself.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-31wode"></use>
+            </svg>
+            <p>我的</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+
+  <script src="./swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: true,
+      autoplay: {
+        delay: 1400,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+  <script>
+    /* 查看更多按钮结合js */
+    
+        function showMore() {
+            $("#textcontain").height("auto");//取消文字容器高度限制
+            $("#btncontain").hide();//隐藏查看更多按钮
+        }
+
+  </script>
+  <script>
+        // 选择可变的SVG元素
+        var svg = document.querySelector('.changeable-svg');
+      
+        // 添加点击事件监听器
+        svg.addEventListener('click', function() {
+          // 在点击事件发生时改变SVG的xlink:href属性
+          this.querySelector('use').setAttribute('xlink:href', '#icon-weibiaoti2'); // 更换为你想要的图标
+        });
+  </script>
+  <script>
+    var json = [
+      {
+        class:"content_card",
+        path:"./img/news/internationalStu.jpg",
+        title:"这名留学生在国外遇上电信诈骗，看社区民警如何千里支招",
+        author:"国家反诈中心",
+        time:"2023-12-14"
+      },
+      {
+        class:"content_card",
+        path:"./img/news/img1.jpg",
+        title:"今天是国家宪法日，宪法与我们每个人的生活有哪些关系？一起来看",
+        author:"国家反诈中心",
+        time:"2023-12-4"
+      },  
+      {
+          class:"content_card",
+          path:"./img/news/img2.jpg",
+          title:"黑猫警长和他的小伙伴们一起带你学反诈",
+          author:"国家反诈中心",
+          time:"2023-11-10"
+      },
+      {
+        class:"content_card",
+          path:"./img/news/img4.jpg",
+          title:"反电信网络诈骗法颁布实施一周年战果丰硕！",
+          author:"国家反诈中心",
+          time:"2023-11-10"
+      },
+      { 
+        class:"content_card",
+        path:"./img/news/img3.jpg",
+        title:"反电信网络诈骗法实施这一年，我们干了这些事儿！",
+        author:"国家反诈中心",
+        time:"2023-11-10"
+      },
+    {
+      class:"content_card",
+      path:"./img/news/img5.jpg",
+      title:"向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年",
+      author:"国家反诈中心",
+      time:"2023-11-10"
+    },{
+      class:"content_card",
+      path:"./img/news/img5.jpg",
+      title:"向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年",
+      author:"国家反诈中心",
+      time:"2023-11-10"
+    },{
+      class:"content_card",
+      path:"./img/news/img5.jpg",
+      title:"向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年",
+      author:"国家反诈中心",
+      time:"2023-11-10"
+    },{
+      class:"content_card",
+      path:"./img/news/img5.jpg",
+      title:"向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年",
+      author:"国家反诈中心",
+      time:"2023-11-10"
+    }];
+
+    /* 将json存放 */
+    /*  获取加入到json的容器位置 */
+    var dynamicContent = document.getElementById("dynamicContent");
+
+  for (var v of json) {
+    // 创建一个新的 div 元素
+    var newDiv = document.createElement("div");
+    newDiv.className = v.class;
+
+    newDiv.innerHTML = `
+      <div class="text">
+        <p>${v.title}</p>
+        <p>${v.author} ${v.time}</p>
+      </div>
+      <img src="${v.path}" alt="">
+    `;
+    // 将新创建的 div 添加到容器中
+    dynamicContent.appendChild(newDiv);
+  }
+  </script>
+</html>

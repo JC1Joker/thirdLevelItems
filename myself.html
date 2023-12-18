@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>国家反诈中心</title>
+    <script src="./font/iconfont.js"></script>
+    <style>
+      body {
+        background-color: #f4f4f4;
+      }
+
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: blue;
+        overflow: hidden;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      body,
+      ul,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+       
+      }
+      a:link{
+        color: black;
+      }
+      a:visited{
+        color: black;
+      }
+      body {
+        margin-bottom: 50px; /* 固定导航一起的 */
+      }
+
+      .text {
+        font-size: 14px;
+        padding: 10px;
+        width: 128px;
+        display: inline-block;
+      }
+      .text p:last-child {
+        color: #929292;
+        line-height: 80px;
+      }
+
+      .bnav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 9; /* 当你滑动时，导航条覆盖内容不跟随移动 */
+      }
+      .bnav li {
+        width: 33.333%;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .banv p {
+        color: #333;
+        line-height: 26px;
+        font-size: 14px;
+        letter-spacing: 3px;
+      }
+      .icon {
+        font-size: 36px;
+        margin: 5px 0;
+      }
+
+      .background-div {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: blue;
+        width: 100%;
+        height: 300px;
+        border-bottom-left-radius: 45%;
+        border-bottom-right-radius: 45%;
+        z-index: 0;
+      }
+      .info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        z-index: 2;
+        padding: 8px;
+        position: relative;
+        margin-left: 20px;
+        margin-top: 30px;
+      }
+      .info img {
+        height: 80px;
+        z-index: 2;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .info .text {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+      }
+      .info .text p {
+        color: white;
+        font-size: 10px;
+        align-items: center;
+      }
+      .info .text p:first-child {
+        font-weight: bold;
+        font-size: 14px;
+        align-items: center;
+      }
+      .reportsNum {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .report,
+      .alarm {
+        width: 50%;
+        text-align: center;
+        padding: 5px;
+      }
+      .reportsNum p {
+        text-align: center;
+      }
+      .reportsNum p:first-child {
+        font-weight: bold;
+        text-align: center;
+      }
+      .directory_contain {
+        padding: 12px;
+        margin-top: 32px;
+      }
+      .directory {
+        display: grid;
+        position: relative;
+        grid-template-rows: repeat(4, 1fr);
+        background-color: #fff;
+        border-radius: 15px;
+        z-index: 2;
+        width: 100%;
+        height: 250px;
+        /* margin: 10px;
+        @media screen and (max-width: 767px) {
+          margin: 6px; /* 莫名出现溢出bug */
+      }
+
+      .directory div {
+        line-height: 50px;
+        border-bottom: 1px solid #ececec;
+        margin-left: 10px;
+      }
+      .directory div:last-child {
+        border-bottom: none;
+      }
+      .directory div span:first-child {
+        /* font-size: px; */
+        line-height: 20px;
+        margin-right: 20px;
+      }
+      .directory div span:last-child {
+        position: absolute;
+        right: 0;
+        margin-right: 18px;
+      }
+      .directory_content {
+        display: flex;
+        align-items: center;
+      }
+      .directory_content a{
+          display: flex;
+        align-items: center;
+      }
+      .directory div span:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="info">
+      <div class="avatar">
+        <img src="./img/myself/avatar.jpg" alt="" />
+      </div>
+      <div class="text">
+        <p>您好,111****1111</p>
+        <a href="./myselfProfile.html"><p>点击查看个人信息 ></p></a>
+      </div>
+    </div>
+    <div class="reportsNum">
+      <div class="report">
+        <p>6</p>
+        <p>举报记录</p>
+      </div>
+      <div>
+        <p>|</p>
+      </div>
+      <div class="alarm">
+        <p>0</p>
+        <p>报案记录</p>
+      </div>
+    </div>
+    <div class="directory_contain">
+      <div class="directory">
+        <div class="directory_content">
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-fankui"></use>
+            </svg>
+          </span>
+          <span>反馈与帮助</span>
+          <span>></span>
+        </div>
+        <div class="directory_content">
+          <a href="./aboutUs.html">
+            <span>
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-guanyu"></use>
+              </svg>
+            </span>
+            <span>关于我们</span>
+            <span>></span>
+          </a>
+        </div>
+        <div class="directory_content">
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-shouce"></use>
+            </svg>
+          </span>
+          <span>用户手册</span>
+          <span>></span>
+        </div>
+        <div class="directory_content">
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-shezhi"></use>
+            </svg>
+          </span>
+          <span>设置</span>
+          <span>></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="background-div"></div>
+    <nav class="bnav">
+      <!-- 下导航 -->
+      <ul>
+        <li>
+          <a href="./index.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-shouye"></use>
+            </svg>
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a href="./deceptionExposure.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-qingdan"></use>
+            </svg>
+            <p>骗局曝光</p>
+          </a>
+        </li>
+        <li>
+          <a href="./myself.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-31wode"></use>
+            </svg>
+            <p>我的</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+  <script src="./js/"></script>
+</html>

@@ -1,0 +1,230 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: blue;
+    overflow: hidden;
+    /* font-weight: bold; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+body,
+ul,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin-bottom: 50px;
+}
+
+.tnav {
+    border: 5px;
+    z-index: 9;
+    /* 当你滑动时，导航条覆盖内容不跟随移动 */
+    border-bottom: 1px solid #929292;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.tnav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.tnav li {
+    margin-bottom: 10px;
+    padding-top: 3px;
+}
+
+.tnav li:first-child {
+    position: relative;
+    margin-right: 10px;
+}
+
+.tnav span {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 46px;
+    margin-left: 5px;
+}
+
+.tnav li:last-child {
+    position: relative;
+    right: 0;
+    margin-right: 5px;
+}
+
+.tnav li:hover {
+    font-weight: bold;
+    border-bottom: 2px solid blue;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+.scrolling_nav {
+    white-space: nowrap;
+    border-bottom: 1px solid #929292;
+    position: fixed;
+    width: 100%;
+    top: 31px;
+    background-color: #fff;
+    z-index: 9;
+    /* height: 40px; */
+}
+
+.scrolling_nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin: 10px;
+}
+
+.scrolling_nav li {
+    display: inline-block;
+    margin-right: 30%;
+    width: 100px;
+    text-align: center;
+}
+
+.scrolling_nav li p {
+    text-align: center;
+}
+
+/* 当屏幕为手机屏幕时超过屏幕就隐藏 */
+@media (max-width: 600px) {
+    .scrolling_nav {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 3000px) {
+    .scrolling_nav {
+        overflow-x: hidden;
+    }
+}
+
+/* 鼠标悬浮的效果 */
+.scrolling_nav ul li:hover {
+    background-color: #f4f4f4;
+    color: blue;
+    border-radius: 3px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text {
+    font-size: 14px;
+    padding: 10px;
+    width: 128px;
+    display: inline-block;
+    padding-top: 25px;
+}
+
+.text p:first-child {
+    color: black;
+    font-weight: bold;
+}
+
+.text p:last-child {
+    color: #929292;
+    line-height: 80px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    /* top: 73px; */
+    position: relative;
+    padding-top: 16%;
+    padding-bottom: 50px;
+    display: none;
+}
+
+.show {
+    /* 用来显示 */
+    display: flex;
+}
+
+.content_card {
+    width: 100%;
+    border-bottom: 1px solid #929292;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.content_card .text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.content_card .text p:last-child {
+    bottom: 0;
+    display: inline-block;
+}
+
+.content_card img {
+    position: relative;
+    width: 145px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.bnav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    /* 当你滑动时，导航条覆盖内容不跟随移动 */
+}
+
+.bnav li {
+    width: 33.333%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.banv p {
+    color: #333;
+    line-height: 26px;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+.icon {
+    font-size: 36px;
+    margin: 5px 0;
+}
+
+#nothing {
+    color: #929292;
+    text-align: center;
+    margin-top: 3%;
+}

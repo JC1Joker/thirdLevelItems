@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper Example</title>
+    <!-- 引入 Swiper 的 CSS 文件 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        /* 添加一些样式来定义轮播图容器的大小 */
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        /* 添加一些样式来定义轮播图中的每个项的样式 */
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #eee;
+            /* 颜色和边框等可以根据需要进行调整 */
+            padding: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Swiper容器 -->
+<div class="swiper-container">
+    <!-- 添加额外的div来定义swiper的轮播图项 -->
+    <div class="swiper-wrapper">
+        <!-- 每个轮播图项都是一个swiper-slide -->
+        <div class="swiper-slide">Slide 1</div>
+        <div class="swiper-slide">Slide 2</div>
+        <div class="swiper-slide">Slide 3</div>
+        <!-- 可以根据需要添加更多的项 -->
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<!-- 引入 Swiper 的 JavaScript 文件 -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    // 初始化Swiper
+    var mySwiper = new Swiper('.swiper-container', {
+        // 轮播图的方向，可设置水平(horizontal)或垂直(vertical)
+        direction: 'horizontal',
+        // 是否循环轮播
+        loop: true,
+        // 分页器
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true, // 允许点击分页器进行切换
+        },
+        // 导航按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
+</body>
+</html>

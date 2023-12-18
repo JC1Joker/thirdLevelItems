@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>滑动切换页面</h1>
+    <p>使用鼠标滚轮滑动来切换页面。</p>
+
+    <script>
+    let currentPageIndex = 0;
+const pages = ['index.html', 'jvbao.html', 'aides.html'];
+let isMouseDown = false;
+
+window.addEventListener('mousedown', (e) => {
+  // 只有在鼠标左键按下时才开始监听滑动事件
+  if (e.button === 0) {
+    isMouseDown = true;
+  }
+});
+
+window.addEventListener('mouseup', (e) => {
+  // 当鼠标左键释放时停止监听滑动事件
+  if (e.button === 0) {
+    isMouseDown = false;
+  }
+});
+
+window.addEventListener('wheel', (e) => {
+  if (!isMouseDown) {
+    return;
+  }
+
+  if (e.deltaY < 0) {
+    // 向上滑动，显示上一个页面
+    currentPageIndex = Math.max(0, currentPageIndex - 1);
+  } else {
+    // 向下滑动，显示下一个页面
+    currentPageIndex = Math.min(pages.length - 1, currentPageIndex + 1);
+  }
+
+  // 跳转到新的页面
+  window.location.href = pages[currentPageIndex];
+});
+    </script>
+</body>
+</html>

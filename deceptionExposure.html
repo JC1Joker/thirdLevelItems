@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- 添加meta元素 -->
+    <title>23201012706-董嘉诚</title>
+    <script src="./font/iconfont.js"></script>
+    <style>
+      body {
+        background-color: #f4f4f4;
+      }
+
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: blue;
+        overflow: hidden;
+        /* font-weight: bold; */
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      body,
+      ul,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        margin-bottom: 50px;
+      }
+      .tnav {
+        border: 5px;
+        z-index: 9; /* 当你滑动时，导航条覆盖内容不跟随移动 */
+        border-bottom: 1px solid #929292;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+      }
+      .tnav ul {
+        display: flex;
+        justify-content: center;
+      }
+      .tnav li {
+        margin-bottom: 10px;
+        padding-top: 3px;
+      }
+      .tnav li:first-child {
+        position: relative;
+        margin-right: 10px;
+      }
+      .tnav span {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 46px;
+        margin-left: 5px;
+      }
+
+      .tnav li:last-child {
+        position: relative;
+        right: 0;
+        margin-right: 5px;
+      }
+      .tnav li:hover {
+        font-weight: bold;
+        border-bottom: 2px solid blue;
+        border-bottom-left-radius: 10%;
+        border-bottom-right-radius: 10%;
+      }
+      .scrolling_nav {
+        white-space: nowrap;
+        border-bottom: 1px solid #929292;
+        position: fixed;
+        width: 100%;
+        top: 31px;
+        background-color: #fff;
+        z-index: 9;
+        /* height: 40px; */
+      }
+      .scrolling_nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        margin: 10px;
+      }
+
+      .scrolling_nav li {
+        display: inline-block;
+        margin-right: 80px;
+        width: 100px;
+        text-align: center;
+      }
+      .scrolling_nav li p {
+        text-align: center;
+      }
+      /* 当屏幕 */
+      @media (max-width: 600px) {
+        .scrolling_nav {
+          overflow-x: hidden;
+        }
+      }
+      /* 鼠标悬浮的效果 */
+      .scrolling_nav ul li:hover {
+        background-color: #f4f4f4;
+        color: blue;
+        border-radius: 3px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+
+      .text {
+        font-size: 14px;
+        padding: 10px;
+        width: 128px;
+        display: inline-block;
+        padding-top: 25px;
+      }
+      .text p:first-child {
+        color: black;
+        font-weight: bold;
+      }
+      .text p:last-child {
+        color: #929292;
+        line-height: 80px;
+      }
+
+      main {
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        /* top: 73px; */
+        position: relative;
+        padding-top: 16%;
+        padding-bottom: 50px;
+        display: none;
+      }
+      .show {
+        /* 用来显示 */
+        display: flex;
+      }
+      .content_card {
+        width: 100%;
+        border-bottom: 1px solid #929292;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .content_card .text {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+      }
+      .content_card .text p:last-child {
+        bottom: 0;
+        display: inline-block;
+      }
+      .content_card img {
+        position: relative;
+        width: 145px;
+        height: 100px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 15px;
+      }
+
+      .bnav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 9; /* 当你滑动时，导航条覆盖内容不跟随移动 */
+      }
+      .bnav li {
+        width: 33.333%;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .banv p {
+        color: #333;
+        line-height: 26px;
+        font-size: 14px;
+        letter-spacing: 3px;
+      }
+      .icon {
+        font-size: 36px;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav header main footer -->
+    <nav class="tnav" id="tnav_fixed">
+      <!-- 上导航logo -->
+      <ul>
+        <li id="dynamic_news">
+          <a href="#">动态</a>
+        </li>
+        <li id="knowledge_news">
+          <a href="./sci-pop.html">科普</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- 横向移动导航栏 -->
+    <nav class="scrolling_nav">
+      <ul>
+        <li id="recommend">推荐</li>
+        <li id="liaoning">辽宁</li>
+        <li id="dynamic">各地动态</li>
+        <li id="knowledge">反诈知识</li>
+        <li id="hot_spot">时事热点</li>
+      </ul>
+    </nav>
+
+    <!-- main内容 -->
+    <article id="recommend">
+      <main class="show">
+        <div class="content_card">
+          <div class="text">
+            <p>今天是国家宪法日，宪法与我们每个人的生活有哪些关系？一起来看</p>
+            <p>国家反诈中心</p>
+          </div>
+          <img src="./img/news/img1.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>黑猫警长和他的小伙伴们一起带你学反诈</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img2.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>反电信网络诈骗法实施这一年，我们干了这些事儿！</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img3.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>反电信网络诈骗法颁布实施一周年战果丰硕！</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img4.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img5.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img5.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img5.jpg" alt="" />
+        </div>
+      </main>
+    </article>
+
+    <article id="liaoning">
+      <main id="liaoning_main">
+        <div class="content_card">
+          <div class="text">
+            <p>黑猫警长和他的小伙伴们一起带你学反诈</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img2.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>反电信网络诈骗法实施这一年，我们干了这些事儿！</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img3.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>反电信网络诈骗法颁布实施一周年战果丰硕！</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img4.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img5.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img5.jpg" alt="" />
+        </div>
+        <div class="content_card">
+          <div class="text">
+            <p>向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img5.jpg" alt="" />
+        </div>
+      </main>
+    </article>
+
+    <article id="dynamic">
+      <main id="dynamic_main">
+        <!-- 此处引用json -->
+      </main>
+    </article>
+
+    <article id="knowledge">
+      <main id="knowledge_main">
+        <!-- 此处引用json -->
+      </main>
+    </article>
+
+    <article id="hot_spot">
+      <main id="hot_spot_main">
+        <div class="content_card">
+          <div class="text">
+            <p>向前跑——《中华人民共和国反电信网络诈骗法》颁布实施一周年</p>
+            <p>国家反诈中心 2023-11-10</p>
+          </div>
+          <img src="./img/news/img5.jpg" alt="" />
+        </div>
+      </main>
+    </article>
+
+    <nav class="bnav">
+      <!-- 下导航 -->
+      <ul>
+        <li>
+          <a href="./index.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-shouye"></use>
+            </svg>
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a href="deceptionExposure.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-qingdan"></use>
+            </svg>
+            <p>骗局曝光</p>
+          </a>
+        </li>
+        <li>
+          <a href="./myself.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-31wode"></use>
+            </svg>
+            <p>我的</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+  <script src="./js/scroll_nav.js"></script>
+  <script>
+    // pc端通过鼠标悬浮显示相应的内容
+    var nav = document.querySelector(".scrolling_nav");
+    var lis = nav.querySelectorAll("li");
+    var mainArticle = document.querySelectorAll(
+      "#recommend > main, #liaoning > main, #dynamic > main , #knowledge > main, #hot_spot > main"
+    );
+
+    for (var i = 0; i < lis.length; i++) {
+      lis[i].index = i;
+      lis[i].onmouseover = function () {
+        for (var t = 0; t < mainArticle.length; t++) {
+          mainArticle[t].style.display = "none";
+          lis[t].classList.remove("cur");
+        }
+        mainArticle[this.index].style.display = "block";
+        lis[this.index].classList.add("cur");
+      };
+    }
+  </script>
+
+  <script>
+    let knowledgeJson = [
+      {
+        class: "content_card",
+        path: "./img/news/25wan.jpg",
+        title: "女子炒币“赚大钱”，一个月暴“负”25万！",
+        author: "国家反诈中心",
+        time: "2023-12-15",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "警惕!“接到百万保障扣费”电话，就是诈骗！",
+        author: "国家反诈中心",
+        time: "2023-11-30",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "投资理财低风险、高回报？全是套路！",
+        author: "国家反诈中心",
+        time: "2023-11-29",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "买卖“两卡”？可“刑”可“拷”！",
+        author: "国家反诈中心",
+        time: "2023-11-27",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "“乌兰牧骑+反诈宣传”包头公安解锁反诈新流量密码",
+        author: "国家反诈中心",
+        time: "2023-11-15",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title:
+          "贵州省2023年“全民反诈乡村行”——流动乡村小舞台走进白云，唱响美丽乡村反诈之行",
+        author: "国家反诈中心",
+        time: "2023-10-29",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "“百万保障”诈骗新手段？预警劝阻带你识破骗子的套路",
+        author: "国家反诈中心",
+        time: "2023-11-27",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/facetime.jpg",
+        title: "FaceTime来电，接还是不接？",
+        author: "国家反诈中心",
+        time: "2023-11-22",
+      },
+      {
+        class: "contend_card",
+        path: "./img/news/25wan.jpg",
+        title: "1分钱就能追星打榜？11个娃被骗25万！",
+        author: "国家反诈中心",
+        time: "2023-11-16",
+      },
+    ];
+    var dynamic = document.getElementById("knowledge_main");
+
+    for (var v of knowledgeJson) {
+      /* 创建一个新的div元素 */
+      var newDiv = document.createElement("div");
+      newDiv.className = v.class;
+
+      newDiv.innerHTML = `
+    
+          <div class="text">
+            <p>${v.title}</p>
+            <p>${v.author} ${v.time}</p>
+          </div>
+          <img src="${v.path}" alt="">
+        
+    `;
+      /* 将新创建的div添加到容器中 */
+      dynamic.appendChild(newDiv);
+    }
+  </script>
+  <script>
+ let dynamicJson = [
+      {
+        class: "content_card",
+        path: "./img/news/25wan.jpg",
+        title: "女子炒币“赚大钱”，一个月暴“负”25万！",
+        author: "国家反诈中心",
+        time: "2023-12-15",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "警惕!“接到百万保障扣费”电话，就是诈骗！",
+        author: "国家反诈中心",
+        time: "2023-11-30",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "投资理财低风险、高回报？全是套路！",
+        author: "国家反诈中心",
+        time: "2023-11-29",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "买卖“两卡”？可“刑”可“拷”！",
+        author: "国家反诈中心",
+        time: "2023-11-27",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "“乌兰牧骑+反诈宣传”包头公安解锁反诈新流量密码",
+        author: "国家反诈中心",
+        time: "2023-11-15",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title:
+          "贵州省2023年“全民反诈乡村行”——流动乡村小舞台走进白云，唱响美丽乡村反诈之行",
+        author: "国家反诈中心",
+        time: "2023-10-29",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/img3.jpg",
+        title: "“百万保障”诈骗新手段？预警劝阻带你识破骗子的套路",
+        author: "国家反诈中心",
+        time: "2023-11-27",
+      },
+      {
+        class: "content_card",
+        path: "./img/news/facetime.jpg",
+        title: "FaceTime来电，接还是不接？",
+        author: "国家反诈中心",
+        time: "2023-11-22",
+      },
+      {
+        class: "contend_card",
+        path: "./img/news/25wan.jpg",
+        title: "1分钱就能追星打榜？11个娃被骗25万！",
+        author: "国家反诈中心",
+        time: "2023-11-16",
+      },
+    ];
+    var dynamic = document.getElementById("dynamic_main");
+
+    for (var v of dynamicJson) {
+      /* 创建一个新的div元素 */
+      var newDiv = document.createElement("div");
+      newDiv.className = v.class;
+
+      newDiv.innerHTML = `
+    
+          <div class="text">
+            <p>${v.title}</p>
+            <p>${v.author} ${v.time}</p>
+          </div>
+          <img src="${v.path}" alt="">
+        
+    `;
+      /* 将新创建的div添加到容器中 */
+      dynamic.appendChild(newDiv);
+    }
+  </script>
+</html>

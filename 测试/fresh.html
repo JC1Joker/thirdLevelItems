@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+  display: flex;
+  border: 1px solid;
+}
+
+.text {
+  flex: 1;
+  border: 1px solid;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  }
+.text p:last-child{
+    display: inline-block;
+    text-align: center;
+}
+
+
+
+.image {
+  flex: 1;
+  border: 1px solid;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+          <p>这是一些文本。</p>
+          <p>ds</p>
+        </div>
+        <div class="image">
+          <img src="./img/myself/avatar.jpg" alt="图片">
+        </div>
+      </div>
+
+      <div class="container">
+          <div class="text">
+            <p>cehsi</p>
+          </div>
+        <div class="img">
+            <img src="./img/myself/avatar.jpg" alt="">
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ad声明页面</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="ad"></div>
+    <script>
+        var ad = document.getElementById("ad");
+        var timer;
+        var gao = ad.offsetHeight;
+        ad.clientHeight;
+        ad.scrollHeight;
+        console.log(gao);
+        window.setTimeout(function(){
+            timer=setInterval(dh,5);/* setInterval毫秒为单位 */
+            /* 回调函数 重复执行*/
+        },3000);
+
+        function dh(){
+            if(gao>=0){
+                ad.style.height=gao--+"px";
+            }else{
+                clearInterval(timer);
+            }
+        }
+    </script>
+</body>
+</html>

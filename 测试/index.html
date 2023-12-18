@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>国家反诈中心</title>
+    <script src="./font/iconfont.js"></script>
+    <style>
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      body,
+      ul,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        margin-bottom: 50px; /* 固定导航一起的 */
+      }
+      .bnav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 9; /* 当你滑动时，导航条覆盖内容不跟随移动 */
+      }
+      .bnav li {
+        width: 33.333%;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .banv p {
+        color: #333;
+        line-height: 26px;
+        font-size: 14px;
+        letter-spacing: 3px;
+      }
+      .icon {
+        font-size: 36px;
+        margin: 5px 0;
+      }
+
+      @media screen and (max-width: 500px) {
+        .bnav li {
+          width: 50%;
+        }
+      }
+        .scrolling-container {
+          overflow-x: auto;
+          white-space: nowrap;
+        }
+
+        .scrolling_img img {
+          display: inline-block;
+          width: 100%; /* 或者你想要的任何宽度 */
+          height: 570px;
+        }
+      
+    </style>
+  </head>
+  <body>
+    <!-- nav header main footer -->
+    <nav class="tnav">
+      <!-- 上导航logo -->
+      <ul>
+        <li></li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <!-- main内容 -->
+      <div class="scorll_img">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <div class="button">
+        <ul>
+          <li>
+            <a href=""></a>
+            <img src="" alt="" />
+          </li>
+          <li>
+            <a href=""></a>
+            <img src="" alt="" />
+            <p></p>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="app_scan"></div>
+      <div class="dynamic"></div>
+    </div>
+    <nav class="bnav">
+      <!-- 下导航 -->
+      <ul>
+        <li>
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-shouye"></use>
+            </svg>
+            <p>首页</p>
+          </a>
+        </li>
+        <li>
+          <a href="./deceptionExposure.html">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-qingdan"></use>
+            </svg>
+            <p>骗局曝光</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-31wode"></use>
+            </svg>
+            <p>我的</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

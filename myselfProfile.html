@@ -33,11 +33,11 @@
         display: inline;
         margin: 0 auto;
       }
-.progressContain{
-  padding: 20px;
-  padding-top: 20px;
-  margin-top: 50%;
-}
+      .progressContain{
+        padding: 20px;
+        padding-top: 20px;
+        margin-top: 50%;
+      }
       .infoProgress{
           background-image: url("./img/background/iv_pross_bg.png");
           background-size: cover;
@@ -78,6 +78,7 @@
         font-size: 9px;
         border-radius: 8px;
         line-height: 9px;
+        margin-left: 3px;
       }
       #special{
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -85,6 +86,10 @@
       }
       .table div p:last-child {
     margin-left: auto;
+  }
+
+  #processBar{
+    background: #fff;
   }
       
       
@@ -103,7 +108,7 @@
       <div id="info" class="infoProgress">
       <p>完善信息，遭遇诈骗我们能够更及时的帮助您</p>
       <p id="progressValue">已完善</p>
-      <progress id="processBar" value="100" max="100"></progress>
+      <progress id="processBar" value="50" max="100"></progress>
     </div>
     
 

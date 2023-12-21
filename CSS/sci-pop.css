@@ -6,7 +6,7 @@ body {
     width: 1em;
     height: 1em;
     vertical-align: -0.15em;
-    fill: blue;
+    fill: currentColor;
     overflow: hidden;
     /* font-weight: bold; */
 }

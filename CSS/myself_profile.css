@@ -37,7 +37,7 @@
   }
 
   .infoProgress {
-      background-image: url("./img/background/iv_pross_bg.png");
+      background-image: url("../img/background/iv_pross_bg.png");
       background-size: cover;
       padding: 10px;
       color: #fff;

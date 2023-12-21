@@ -1,0 +1,97 @@
+  body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+  }
+
+  main {
+      padding-top: 8%;
+  }
+
+  .tnav {
+      position: fixed;
+      background-color: #fff;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 40px;
+      display: flex;
+      align-items: center;
+  }
+
+  .tnav a img {
+      height: 20px;
+      line-height: 20px;
+  }
+
+  .tnav p {
+      text-align: center;
+      display: inline;
+      margin: 0 auto;
+  }
+
+  .progressContain {
+      padding: 20px;
+      padding-top: 20px;
+      margin-top: 50%;
+  }
+
+  .infoProgress {
+      background-image: url("./img/background/iv_pross_bg.png");
+      background-size: cover;
+      padding: 10px;
+      color: #fff;
+  }
+
+  #progressValue {
+      font-size: 12px;
+  }
+
+  #basicInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+  }
+
+  .title {
+      color: gray;
+      font-size: 12px;
+  }
+
+  .table {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 18px;
+  }
+
+  .table div {
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #797979;
+      line-height: 9px;
+  }
+
+  /* id身份认证 */
+  #identify {
+      border: 1px solid blue;
+      color: blue;
+      padding: 11px;
+      font-size: 9px;
+      border-radius: 8px;
+      line-height: 9px;
+  }
+
+  #special {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 12px;
+  }
+
+  .table div p:last-child {
+      margin-left: auto;
+  }
+
+  #progressBar {
+      width: 100%;
+  }

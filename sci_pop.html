@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- 当网站添加到主屏幕快速启动方式，启动网页时全屏显示 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="2706">
+
     <!-- 添加meta元素 -->
     <title>23201012706-董嘉诚</title>
     <script src="./font/iconfont.js"></script>
@@ -451,25 +453,6 @@
     </nav>
   </body>
   <script src="./js/scroll_nav.js"></script>
-  <script>
-    // pc端通过鼠标悬浮显示相应的内容
-    var nav = document.querySelector(".scrolling_nav");
-    var lis = nav.querySelectorAll("li");
-    var mainArticle = document.querySelectorAll(
-      "#recommend > main, #liaoning > main, #fake_rebates > main, #fake_investment > main, #fake_loans > main, #fake_ec > main, #fake_police > main, #fake_credit > main, #fake_service > main, #fake_leader > main, #fake_game_trade > main, #fake_dating > main, #other > main"
-    );
-
-    for (var i = 0; i < lis.length; i++) {
-      lis[i].index = i;
-      lis[i].onmouseover = function () {
-        for (var t = 0; t < mainArticle.length; t++) {
-          mainArticle[t].style.display = "none";
-          lis[t].classList.remove("cur");
-        }
-        mainArticle[this.index].style.display = "block";
-        lis[this.index].classList.add("cur");
-      };
-    }
-  </script>
+  <script src="./js/hover_display.js"></script>
   <script src="./js/sci-pop.js"></script>
 </html>

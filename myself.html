@@ -74,8 +74,8 @@
       .icon {
         font-size: 36px;
         margin: 5px 0;
+        color: #637afe;
       }
-
       .background-div {
         position: fixed;
         top: 0;
@@ -182,26 +182,28 @@
       .directory div span:last-child {
         margin-left: auto;
       }
-      .directory div a span:last-child {
-        margin-left: auto;
-      }
       .directory_content {
         display: flex;
         align-items: center;
       }
-      .directory_content a {
+      /* .directory_content a {
         display: flex;
         align-items: center;
-      }
+      } */
+      /* #right{
+        margin-left: auto !important;
+      } */
+      
       .directory div span:first-child {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
       }
+      
     </style>
   </head>
-
+x
   <body>
     <div class="info">
       <div class="avatar">
@@ -236,8 +238,7 @@
           <span>反馈与帮助</span>
           <span>></span>
         </div>
-        <div class="directory_content">
-          <a href="./aboutUs.html">
+        <div class="directory_content" id="linkSrc">
             <span>
               <svg class="icon" aria-hidden="true">
                 <use xlink:href="#icon-guanyu"></use>
@@ -245,7 +246,6 @@
             </span>
             <span>关于我们</span>
             <span>></span>
-          </a>
         </div>
         <div class="directory_content">
           <span>
@@ -290,7 +290,7 @@
         </li>
         <li>
           <a href="./myself.html">
-            <svg class="icon" aria-hidden="true">
+            <svg class="icon" aria-hidden="true" id="myself_icon">
               <use xlink:href="#icon-31wode"></use>
             </svg>
             <p>我的</p>
@@ -298,6 +298,12 @@
         </li>
       </ul>
     </nav>
+    <script>
+      var link = document.getElementById("linkSrc");
+      link.addEventListener('click',onclick);
+      function onclick(){
+        window.location.href="./aboutUs.html";
+      }
+    </script>
   </body>
-  <script src="./js/"></script>
 </html>

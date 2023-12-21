@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>23201012706-董嘉诚</title>
     <script src="./font/iconfont.js"></script>
     <link rel="stylesheet" href="./swiper/swiper-bundle.min.css" />
@@ -192,6 +193,7 @@
         flex-direction: row;
         border-bottom: 1px solid #ececec;
       }
+      /* 拉取deceptionExposure 中的card样式 */
       .content_card{
         width: 100%;
         border-bottom: 1px solid #929292;
@@ -252,37 +254,17 @@
         font-size: 36px;
         margin: 5px 0;
       }
-       /* #ad{
+       #ad{
             height: 400px;
             background-color: #099;
             color: #ececec;
           text-align: center;
           
-        } */
+        }
 
     </style>
   </head>
   <body>
-    <script>
-        var ad = document.getElementById("ad");
-        var timer;
-        var gao = ad.offsetHeight;
-        ad.clientHeight;
-        ad.scrollHeight;
-        console.log(gao);
-        window.setTimeout(function(){
-            timer=setInterval(dh,5);/* setInterval毫秒为单位 */
-            /* 回调函数 重复执行*/
-        },3000);
-
-        function dh(){
-            if(gao>=0){
-                ad.style.height=gao--+"px";
-            }else{
-                clearInterval(timer);
-            }
-        }
-    </script>
     <!-- nav header main footer -->
     <nav class="tnav" id="tnav_fixed">
       <!-- 上导航logo -->
@@ -292,9 +274,12 @@
         </li>
         <span>国家反诈中心</span>
         <li>
+          <a href="./announce.html">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-xiaoxi"></use>
           </svg>
+          </a>
+          
         </li>
       </ul>
     </nav>
@@ -380,7 +365,7 @@
          <!-- 此处引用json -->
 
         </div>
-      <div class="open-btn" id="btncontain">
+    <div class="open-btn" id="btncontain">
         <a onclick="showMore()">更多内容</a>
     </div>
       <!-- 最新动态 -->
@@ -532,4 +517,11 @@
     dynamicContent.appendChild(newDiv);
   }
   </script>
+  <script>
+          function changeBackgroundColor(event) {
+            event.preventDefault(); // 阻止默认链接跳转行为
+            var target = event.target; // 获取点击的元素
+            target.style.backgroundColor = "red"; // 修改元素的背景颜色
+          }
+        </script>
 </html>

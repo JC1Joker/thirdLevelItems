@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>report_details</title>
 
     <style>
@@ -12,101 +16,99 @@
         padding: 0; */
         background-color: #f4f4f4;
       }
-      a{
+      a {
         text-decoration: none;
         color: black;
         text-align: left;
         font-size: 30px;
         line-height: 40px;
       }
-      .tnav{
+      .tnav {
         z-index: 5;
         position: fixed;
-        background-color: rgba(#637afe 0.5);
+        background-color: rgba(blue 0.5);
         width: 100%;
-        top:0;
+        top: 0;
         left: 0;
         height: 5%;
         display: flex;
         align-items: center;
       }
-      .tnav a img{
+      .tnav a img {
         height: 20px;
         line-height: 20px;
       }
-      
-      .tnav p{
+
+      .tnav p {
         text-align: center;
         display: inline;
         margin: 0 auto;
         color: #fff;
       }
-      main{
+      main {
         position: relative;
         top: 50px;
         z-index: 2;
       }
-      .logo_about_us{
+      .logo_about_us {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
         justify-content: center;
         text-align: center;
         color: #fff;
-        margin-top: 8%;
+        margin-top: 4%;
       }
-      .logo_about_us p:first-child{
+      .logo_about_us p:first-child {
         font-weight: bold;
         font-size: 16px;
       }
-      .logo_about_us p:last-child{
+      .logo_about_us p:last-child {
         font-size: 10px;
         letter-spacing: 2px;
-        font-weight: 0;
+        font-weight: none;
       }
-       .logo_about_us img{
+      .logo_about_us img {
         height: 10%;
         width: 16%;
         align-items: center;
         justify-content: center;
-        margin:0 auto;
-       }
-       .table{
+        margin: 0 auto;
+      }
+      .table {
         display: flex;
         flex-direction: column;
         margin-top: 20%;
-       }
-        .table div{
-            z-index: 5;
-            border-bottom: 1px solid #797979;
-            display: flex;
-    }
-    .table div p:first-child{
-            width: 50%;
-        }
-        .table div p:last-child{
-            color: #646464;
-            margin-left: auto;
-    }
+      }
+      .table div {
+        z-index: 5;
+        border-bottom: 1px solid #797979;
+        display: flex;
+      }
+      .table div p:first-child {
+        width: 50%;
+      }
+      .table div p:last-child {
+        color: #646464;
+        margin-left: auto;
+      }
 
-
-     
       button {
         background-color: blue;
         color: #fff;
-        border-radius: 5px; 
-        display: inline-block; 
-        padding: 10px; 
+        border-radius: 20px;
+        display: inline-block;
+        padding: 10px;
         border: none;
         width: 100%;
         margin-top: 20%;
       }
 
-       .background-div {
+      .background-div {
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #637afe;
+        background-color: #637afeda;
         width: 100%;
         height: 300px;
         border-bottom-left-radius: 45%;
@@ -118,43 +120,44 @@
   <body>
     <!-- 进入页面的提示 -->
     <nav class="tnav">
-      <a href="./myself.html"><img src="./img/plugins/back_bla_arrow.png" alt=""></a>
+      <a href="./myself.html"
+        ><img src="./img/plugins/back_bla_arrow.png" alt=""
+      /></a>
       <p>关于我们</p>
     </nav>
-    
-<main>
-    <div class="logo_about_us">
-        <img src="./img/index/logo_about_us.png" alt="">
+
+    <main>
+      <div class="logo_about_us">
+        <img src="./img/index/logo_about_us.png" alt="" />
         <p>国家反诈中心</p>
         <p>打击防范电信网络诈骗</p>
-    </div>
-    <div class="table">
+      </div>
+      <div class="table">
         <div>
-            <p>当前版本号：</p>
-            <p>v2.0.12</p>
+          <p>当前版本号：</p>
+          <p>v2.0.12</p>
         </div>
         <div>
-            <p>服务协议</p>
-            <p>></p>
+          <p>服务协议</p>
+          <p>></p>
         </div>
         <div>
-            <p>隐私政策</p>
-            <p>></p>
+          <p>隐私政策</p>
+          <p>></p>
         </div>
         <div>
-            <p>版权所有：</p>
-            <p>国家反诈中心</p>
+          <p>版权所有：</p>
+          <p>国家反诈中心</p>
         </div>
         <div>
-            <p>技术支持：</p>
-            <p>国家互联网应急中心</p>
+          <p>技术支持：</p>
+          <p>国家互联网应急中心</p>
         </div>
-    </div>
-    <div class="button">
+      </div>
+      <div class="button">
         <button>检查更新</button>
-    </div>
-</main>
+      </div>
+    </main>
     <div class="background-div"></div>
-
   </body>
 </html>

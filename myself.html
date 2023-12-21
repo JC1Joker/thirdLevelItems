@@ -30,12 +30,11 @@
       }
       a {
         text-decoration: none;
-       
       }
-      a:link{
+      a:link {
         color: black;
       }
-      a:visited{
+      a:visited {
         color: black;
       }
       body {
@@ -160,30 +159,38 @@
           margin: 6px; /* 莫名出现溢出bug */
       }
 
+      .directory_content {
+        display: flex;
+      }
       .directory div {
         line-height: 50px;
         border-bottom: 1px solid #ececec;
         margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+      }
+      .directory_content span:last-child {
+        margin-left: auto;
       }
       .directory div:last-child {
         border-bottom: none;
       }
       .directory div span:first-child {
-        /* font-size: px; */
         line-height: 20px;
         margin-right: 20px;
       }
       .directory div span:last-child {
-        position: absolute;
-        right: 0;
-        margin-right: 18px;
+        margin-left: auto;
+      }
+      .directory div a span:last-child {
+        margin-left: auto;
       }
       .directory_content {
         display: flex;
         align-items: center;
       }
-      .directory_content a{
-          display: flex;
+      .directory_content a {
+        display: flex;
         align-items: center;
       }
       .directory div span:first-child {

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23201012706-董嘉诚</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+        .tnav{
+        position: fixed;
+        background-color: #fff;
+        width: 100%;
+        top:0;
+        left: 0;
+        height: 40px;
+        display: flex;
+        align-items: center;
+      }
+      .tnav a img{
+        height: 20px;
+        line-height: 20px;
+      }
+      
+      .tnav p{
+        text-align: center;
+        display: inline;
+        margin: 0 auto;
+        
+      }
+      #time {
+        text-align: center;
+        margin: 8px;
+        color: #797979;
+      }
+
+      .table {
+        margin: 0 auto;
+      }
+      
+      
+      .table div {
+        background-color: #fff;
+        border-bottom: 1px solid #797979;
+        font-size: 14px;
+        padding: 2%;
+      }
+      .table div:last-child{
+        border-bottom: none;
+      }
+      .text{
+        display: flex;
+        flex-direction: column;
+      }
+      .text p{
+        display:flex;
+        flex-direction: column;
+      }
+
+      .text div:last-child {
+        color: #797979;
+        display: flex;
+        flex-direction: row;
+      }
+      .bottom{
+        display: flex;
+        flex-direction: row;
+      }
+      .bottom p:last-child{
+        margin-left: auto;
+      }
+
+      .first{
+        margin-top: 12%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="tnav">
+     <a href="./index.html"><img src="./img/plugins/back_bla_arrow.png" alt=""></a>
+      <p>公告</p>
+    </nav>
+
+    <div class="table first">
+      <p id="time">2023-4-08 00:00:00</p>
+      <div class="text">
+        <div class="top">
+            <p>系统安全升级通知</p>
+        </div>
+        <div class="bottom">
+          <p>查看详情</p>
+          <p>></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="table">
+      <p id="time">2023-08-12 15:30:00</p>
+      <div class="text">
+        <div class="top">
+            <p>系统服务升级维护通知</p>
+        </div>
+        <div class="bottom">
+          <p>查看详情</p>
+          <p>></p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

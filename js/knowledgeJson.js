@@ -6,7 +6,7 @@ fetch(json_url)
   .then((data_json) => {
     // 在这里处理接口返回的数据
     // console.log(data);
-    for (var v of daya_json) {
+    for (var v of data_json) {
       /* 创建一个新的div元素 */
       var newDiv = document.createElement("div");
       newDiv.className = v.class;

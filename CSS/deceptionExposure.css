@@ -28,7 +28,7 @@
  }
 
  body {
-     margin-bottom: 50px;
+     margin-bottom: 3.125rem;
  }
 
  .tnav {
@@ -50,8 +50,8 @@
  }
 
  .tnav li {
-     margin-bottom: 10px;
-     padding-top: 3px;
+     margin-bottom: 0.625rem;
+     padding-top: 0.1875rem;
  }
 
  .tnav li:first-child {
@@ -60,31 +60,31 @@
  }
 
  .tnav span {
-     font-size: 16px;
+     font-size: 1rem;
      font-weight: bold;
-     line-height: 46px;
-     margin-left: 5px;
+     line-height: 2.875rem;
+     margin-left: 0.3125rem;
  }
 
  .tnav li:last-child {
      position: relative;
      right: 0;
-     margin-right: 5px;
+     margin-right: 0.3125rem;
  }
 
  .tnav li:hover {
      font-weight: bold;
-     border-bottom: 2px solid blue;
+     border-bottom: 0.125rem solid blue;
      border-bottom-left-radius: 10%;
      border-bottom-right-radius: 10%;
  }
 
  .scrolling_nav {
      white-space: nowrap;
-     border-bottom: 1px solid #929292;
+     border-bottom: 0.0625rem solid #929292;
      position: fixed;
      width: 100%;
-     top: 31px;
+     top: 1.9375rem;
      background-color: #fff;
      z-index: 9;
      /* height: 40px; */

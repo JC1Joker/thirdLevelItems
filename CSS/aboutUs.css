@@ -9,8 +9,8 @@
      text-decoration: none;
      color: black;
      text-align: left;
-     font-size: 30px;
-     line-height: 40px;
+     font-size: 1.875rem;
+     line-height: 2.5rem;
  }
 
  .tnav {
@@ -26,8 +26,8 @@
  }
 
  .tnav a img {
-     height: 20px;
-     line-height: 20px;
+     height: 1.25rem;
+     line-height: 1.25rem;
  }
 
  .tnav p {
@@ -39,7 +39,7 @@
 
  main {
      position: relative;
-     top: 50px;
+     top: 3.125rem;
      z-index: 2;
  }
 
@@ -55,12 +55,12 @@
 
  .logo_about_us p:first-child {
      font-weight: bold;
-     font-size: 16px;
+     font-size: 1rem;
  }
 
  .logo_about_us p:last-child {
-     font-size: 10px;
-     letter-spacing: 2px;
+     font-size: 0.625rem;
+     letter-spacing: 0.125rem;
      font-weight: none;
  }
 
@@ -80,7 +80,7 @@
 
  .table div {
      z-index: 5;
-     border-bottom: 1px solid #797979;
+     border-bottom: 0.0625rem solid #797979;
      display: flex;
  }
 
@@ -96,9 +96,9 @@
  button {
      background-color: blue;
      color: #fff;
-     border-radius: 20px;
+     border-radius: 1.25rem;
      display: inline-block;
-     padding: 10px;
+     padding: 0.625rem;
      border: none;
      width: 100%;
      margin-top: 20%;

@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="author" content="2706">
-    <link rel="stylesheet" href="./announce.html">
+    <link rel="stylesheet" href="./CSS/announce.css">
     <title>23201012706-董嘉诚</title>
   
   </head>
@@ -21,7 +21,7 @@
 
     <div class="table first">
       <p id="time">2023-4-08 00:00:00</p>
-      <div class="text">
+      <div class="text" id="text">
         <div class="top">
             <p>系统安全升级通知</p>
         </div>
@@ -32,9 +32,9 @@
       </div>
     </div>
 
-    <div class="table">
+    <div class="table" >
       <p id="time">2023-08-12 15:30:00</p>
-      <div class="text">
+      <div class="text" id="text1">
         <div class="top">
             <p>系统服务升级维护通知</p>
         </div>
@@ -44,5 +44,12 @@
         </div>
       </div>
     </div>
+    <script>
+      let check = document.getElementById("text");
+      check.addEventListener("click",clickCheck);
+      function clickCheck(){
+        window.location.href = "./announce_detail.html"
+      }
+    </script>
   </body>
 </html>

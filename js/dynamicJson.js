@@ -1,4 +1,4 @@
-let url = "http://rap2api.taobao.org/app/mock/316321/djc";
+let url = "http://rap2api.taobao.org/app/mock/316321/djc/dynamicjson";
 var dynamic = document.getElementById("dynamic_main");
 
 fetch(url)
@@ -28,3 +28,5 @@ fetch(url)
     // 在这里处理错误
     console.error("Error:", error);
   });
+
+  

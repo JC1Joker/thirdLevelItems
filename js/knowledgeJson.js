@@ -1,12 +1,12 @@
-let url = "http://rap2api.taobao.org/app/mock/316321/djc/knowledgejson"
-var dynamic = document.getElementById("knowledge_main");
+let url1 = "http://rap2api.taobao.org/app/mock/316321/djc/knowledgejson";
+var dynamic1 = document.getElementById("knowledge_main");
 
-fetch(url)
+fetch(url1)
   .then((response) => response.json())
-  .then((data) => {
+  .then((data1) => {
     // 在这里处理接口返回的数据
     // console.log(data);
-    for (var v of data) {
+    for (var v of data1) {
       /* 创建一个新的div元素 */
       var newDiv = document.createElement("div");
       newDiv.className = v.class;
@@ -21,11 +21,10 @@ fetch(url)
         
     `;
       /* 将新创建的div添加到容器中 */
-      dynamic.appendChild(newDiv);
+      dynamic1.appendChild(newDiv);
     }
   })
   .catch((error) => {
     // 在这里处理错误
     console.error("Error:", error);
   });
-

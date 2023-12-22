@@ -1,4 +1,4 @@
-let knowledgeJson = "http://rap2api.taobao.org/app/mock/316321/djc/knowledgejson"
+let url = "http://rap2api.taobao.org/app/mock/316321/djc/knowledgejson"
 var dynamic = document.getElementById("knowledge_main");
 
 fetch(url)

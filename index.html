@@ -33,6 +33,28 @@
         </li>
       </ul>
     </nav>
+
+     <div id="ad"></div>
+    <script>
+        var ad = document.getElementById("ad");
+        var timer;
+        var gao = ad.offsetHeight;
+        ad.clientHeight;
+        ad.scrollHeight;
+        console.log(gao);
+        window.setTimeout(function(){
+            timer=setInterval(dh,5);/* setInterval毫秒为单位 */
+            /* 回调函数 重复执行*/
+        },3000);
+
+        function dh(){
+            if(gao>=0){
+                ad.style.height=gao--+"px";
+            }else{
+                clearInterval(timer);
+            }
+        }
+    </script>
  
     <!-- main内容 -->
    <div class="img">
@@ -114,9 +136,7 @@
          <!-- 此处引用json -->
 
         </div>
-    <div class="open-btn" id="btncontain">
-        <a onclick="showMore()">更多内容</a>
-    </div>
+        
       <!-- 最新动态 -->
     
     <nav class="bnav">

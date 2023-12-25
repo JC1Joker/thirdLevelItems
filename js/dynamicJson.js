@@ -28,5 +28,3 @@ fetch(url)
     // 在这里处理错误
     console.error("Error:", error);
   });
-
-  

@@ -1,7 +1,12 @@
 let json_url = "http://rap2api.taobao.org/app/mock/316321/djc/knowledgejson";
 var dynamic_id = document.getElementById("knowledge_main");
 
-fetch(json_url)
+fetch(json_url, {
+   method: "GET",
+   headers: {
+     "Content-Type": "application/json",
+   },
+ })
   .then((response) => response.json())
   .then((data_json) => {
     // 在这里处理接口返回的数据

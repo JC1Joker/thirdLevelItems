@@ -1,13 +1,13 @@
 let url = "http://rap2api.taobao.org/app/mock/316321/djc/dynamicjson";
 var dynamic = document.getElementById("dynamic_main");
 
-//  fetch(url, {
-//    method: "GET",
-//    headers: {
-//      "Content-Type": "application/json",
-//    },
-//  })
- fetch(url)
+ fetch(url, {
+   method: "GET",
+   headers: {
+     "Content-Type": "application/json",
+   },
+ })
+//  fetch(url)
    .then((response) => response.json())
    .then((data) => {
      // 在这里处理接口返回的数据

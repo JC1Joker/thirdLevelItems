@@ -244,15 +244,14 @@
 // ]
 
   var dynamic_id = document.getElementById("dynamicContent");
-    fetch("https://rap2api.taobao.org/app/mock/316321/djc/index",{
-      method:'GET',
-      headers:{
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-    })
+  fetch("http://rap2api.taobao.org/app/mock/316321/djc/index", {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    mode: 'cors',
+  })
+    /* TODO：跨域问题 */
   .then(response => response.json())
   // .then(data => console.log(data))
   .then((index_json) => {

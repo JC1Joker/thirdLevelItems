@@ -5,7 +5,7 @@ var dynamic_id = document.getElementById("knowledge_main");
    method: "GET",
    headers: {
      "Content-Type": "application/json",
-   },
+   }
  })
    .then((response) => response.json())
    .then((data_json) => {

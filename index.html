@@ -242,9 +242,9 @@
 //       time: "2023-11-10"
 //     }
 // ]
-  let url = "http://rap2api.taobao.org/app/mock/316321/djc/index";
+
   var dynamic_id = document.getElementById("dynamicContent");
-    fetch(url,{
+    fetch("http://rap2api.taobao.org/app/mock/316321/djc/index",{
       method:'GET',
       headers:{
         'Content-Type': 'application/json',
@@ -253,7 +253,8 @@
         'Access-Control-Allow-Headers': 'Content-Type',
       },
     })
-  .then((response) => response.json())
+  .then(response => response.json())
+  // .then(data => console.log(data))
   .then((index_json) => {
     // 在这里处理接口返回的数据
     // console.log(data);

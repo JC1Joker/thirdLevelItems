@@ -1,0 +1,99 @@
+  .tnav {
+
+      position: fixed;
+      background-color: #fff;
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 40px;
+      display: flex;
+      align-items: center;
+  }
+
+  .tnav a img {
+      height: 20px;
+      line-height: 20px;
+  }
+
+  .tnav p {
+      text-align: center;
+      display: inline;
+      margin: 0 auto;
+
+  }
+
+  body {
+      padding: 0;
+      margin: 0;
+  }
+
+  main {
+      border-bottom: 1px solid #797979;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: .3%;
+      margin-bottom: 10%;
+      margin: 0 auto;
+      margin-top: 5%;
+  }
+
+  div img {
+      margin: 0 auto;
+      width: 80%;
+      height: 80%;
+  }
+
+  #subtitle {
+      display: flex;
+      flex-direction: row;
+      font-size: 0.875rem;
+  }
+
+  .time {
+      color: #797979;
+      margin-left: 3%;
+      margin-right: auto;
+      height: 40px;
+  }
+
+  footer {
+      padding: 1%;
+      width: 98%;
+      border-radius: 15%;
+      margin-bottom: 16%;
+  }
+
+  footer img {
+      height: 150px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+  }
+
+  button {
+      border: none;
+      background-color: blue;
+      text-align: center;
+      width: 100%;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  button p:first-child {
+      font-size: 12px;
+  }
+
+  button p:last-child {
+      font-size: 6px;
+  }
+
+  .fixed {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+  }
